@@ -19,6 +19,7 @@
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
             </p>
         </div>
+        <%--<button class="foo-button mdc-button">Button</button>--%>
         <div class="col-md-4">
             <h2>Get more libraries</h2>
             <p>

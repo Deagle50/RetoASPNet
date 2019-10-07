@@ -1,0 +1,4 @@
+Modo oscuro y modo claro
+Varios idiomas
+
+DDL con tipos de mobs (no hostiles, esqueloides, zombies, end...)
