@@ -10,6 +10,6 @@
 namespace RetoASPNet {
     
     
-    public partial class _Default {
+    public partial class Structures {
     }
 }
