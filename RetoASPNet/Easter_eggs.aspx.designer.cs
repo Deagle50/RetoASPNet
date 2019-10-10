@@ -10,6 +10,6 @@
 namespace RetoASPNet {
     
     
-    public partial class About {
+    public partial class Easter_eggs {
     }
 }

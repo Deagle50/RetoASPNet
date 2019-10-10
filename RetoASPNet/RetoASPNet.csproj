@@ -106,12 +106,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Biomes.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Easter_eggs.aspx" />
     <Content Include="Mobs.aspx" />
     <Content Include="Source.aspx" />
     <Content Include="favicon.ico" />
@@ -157,6 +159,8 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Structures.aspx" />
+    <Content Include="Style\Style.css" />
+    <Content Include="Tools.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -172,12 +176,26 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Biomes.aspx.cs">
+      <DependentUpon>Biomes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Biomes.aspx.designer.cs">
+      <DependentUpon>Biomes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Easter_eggs.aspx.cs">
+      <DependentUpon>Easter_eggs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Easter_eggs.aspx.designer.cs">
+      <DependentUpon>Easter_eggs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mobs.aspx.cs">
       <DependentUpon>Mobs.aspx</DependentUpon>
@@ -217,6 +235,13 @@
     </Compile>
     <Compile Include="Structures.aspx.designer.cs">
       <DependentUpon>Structures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools.aspx.cs">
+      <DependentUpon>Tools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools.aspx.designer.cs">
+      <DependentUpon>Tools.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

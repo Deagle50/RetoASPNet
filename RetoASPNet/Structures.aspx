@@ -1,6 +1,8 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Structures.aspx.cs" Inherits="RetoASPNet.Structures" %>
+﻿<%@ Page Title="Structures" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Structures.aspx.cs" Inherits="RetoASPNet.Structures" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <%-- CSS propio --%>
+        <link href="style/style.css" rel="stylesheet" type="text/css"/>
     <h2><%: Title %>.</h2>
     <h3>Your contact page.</h3>
     <address>

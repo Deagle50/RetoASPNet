@@ -7,9 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace RetoASPNet {
-    
-    
-    public partial class About {
-    }
+
+
+public partial class  Biomes{
 }

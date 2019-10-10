@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="RetoASPNet.Contact" %>
+﻿<%@ Page Title="Easter Eggs" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Easter_eggs.aspx.cs" Inherits="RetoASPNet.Easter_eggs" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <%-- CSS propio --%>
