@@ -167,6 +167,7 @@
 
 /* Puts margins to main div */
 .principal {
+    border-radius:7px;
     margin: 3% 14% 3% 14%;
     padding: 10px 1% 10px 1%;
 }
