@@ -115,6 +115,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Easter_eggs.aspx" />
     <Content Include="Mobs.aspx" />
+    <Content Include="Scripts\Scripts.js" />
     <Content Include="Source.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

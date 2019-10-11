@@ -9,5 +9,5 @@
 
 
 
-public partial class  Informacion{
+public partial class  {
 }

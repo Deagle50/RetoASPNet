@@ -30,21 +30,22 @@
         <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">--%>
 
 </head>
-<body>
+<body id="cuerpo" class="darkbody">
     <form runat="server">
 
 
-        <div class="topnav" id="myTopnav">
-            <a href="Source.aspx" class="active">Home</a>
-            <div class="dd">
-                <button  class="dropbtn">Informacion</button>
+        <div class="topnav darktopnav" id="topnavid">
+            <div class="topnav2">
+            <a href="Source.aspx" class="active">Página principal</a>
+            <div class="darkdd dd" id="ddid">
+                <button  class="darkdropbtn dropbtn" id="dropbtnid">Informacion</button>
                     <i class="fa fa-caret-down"></i>
                 
-                <div class="dd-content">
+                <div class="darkdd-content dd-content" id="dd-contentid">
                     <a href="Mobs.aspx">Mobs</a>
-                    <a href="Biomes.aspx">Biomes</a>
-                    <a href="Structures.aspx">Structures</a>
-                    <a href="Tools.aspx">Tools</a>
+                    <a href="Biomes.aspx">Biomas</a>
+                    <a href="Structures.aspx">Estructuras</a>
+                    <a href="Tools.aspx">Herramientas</a>
                     <a href="Easter_eggs.aspx">Easter Eggs</a>
                 </div>
             </div>
@@ -53,6 +54,7 @@
             
             
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
         </div>
 
 
@@ -60,23 +62,20 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Day %>/<%: DateTime.Now.Month %>/<%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
-            </footer>
+            
+                <footer>
+                        <p>&copy; <%: DateTime.Now.Day %>/<%: DateTime.Now.Month %>/<%: DateTime.Now.Year %>
+                         &nbsp;- &nbsp;Minecraft &nbsp;
+                        <a runat="server" href="~/About">Sobre nosotros</a> 
+                        <a runat="server" href="~/Contact">Contacto</a> 
+                        <a href="javascript:void(0);" onclick="cambiarTema()">Tema</a>
+                        <a runat="server" href="#">Idioma</a></p>       
+                </footer>
+                
         </div>
 
     </form>
 
-    <script type="text/javascript">
-        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-    </script>
+    <script src="Scripts/Scripts.js"></script>
 </body>
 </html>

@@ -9,5 +9,5 @@
 
 
 
-public partial class  Biomes{
+public partial class  {
 }

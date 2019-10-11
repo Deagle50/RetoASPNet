@@ -2,5 +2,5 @@
         <link href="style/style.css" rel="stylesheet" type="text/css"/>
 
 	<div class="principal">
-		<h1></h1>
+		<h1 class="Titulo"></h1>
 	</div>
