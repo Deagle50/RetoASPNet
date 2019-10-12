@@ -38,7 +38,7 @@
             <div class="topnav2">
             <a href="Source.aspx" class="active">Página principal</a>
             <div class="darkdd dd" id="ddid">
-                <button  class="darkdropbtn dropbtn" id="dropbtnid">Informacion</button>
+                <button  class="darkdropbtn dropbtn" id="dropbtnid">Información</button>
                     <i class="fa fa-caret-down"></i>
                 
                 <div class="darkdd-content dd-content" id="dd-contentid">
@@ -49,8 +49,8 @@
                     <a href="Easter_eggs.aspx">Easter Eggs</a>
                 </div>
             </div>
-            <a href="About.aspx">About</a>
-            <a href="Contact.aspx">Contact</a>
+            <a href="About.aspx">Sobre nosotros</a>
+            <a href="Contact.aspx">Contacto</a>
             
             
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
@@ -62,15 +62,16 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            
-                <footer>
-                        <p>&copy; <%: DateTime.Now.Day %>/<%: DateTime.Now.Month %>/<%: DateTime.Now.Year %>
+                <div>
+                <footer  class="footer darkfooter" id="footerid" >
+                        &copy; <%: DateTime.Now.Day %>/<%: DateTime.Now.Month %>/<%: DateTime.Now.Year %>
                          &nbsp;- &nbsp;Minecraft &nbsp;
                         <a runat="server" href="~/About">Sobre nosotros</a> 
                         <a runat="server" href="~/Contact">Contacto</a> 
                         <a href="javascript:void(0);" onclick="cambiarTema()">Tema</a>
-                        <a runat="server" href="#">Idioma</a></p>       
+                        <a runat="server" href="#">Idioma</a>
                 </footer>
+                    </div>
                 
         </div>
 

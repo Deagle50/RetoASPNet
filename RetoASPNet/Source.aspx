@@ -6,6 +6,8 @@
     <div class="darkprincipal principal" id="principalid">
         <h1 class="titulo"><%:Page.Title %></h1>
             <p class="parrafoprincipal">
+                <a href="Mobs.aspx"><img class="image" src="/images/mobs.png" alt="Minecraft mob (zombie)" /></a>
+
                 Lorem ipsum dolor sit amet consectetur adipiscing elit interdum dapibus morbi eros,
                 mollis luctus vivamus cum odio facilisi nibh libero vehicula. Eleifend ornare quam 
                 integer posuere bibendum interdum euismod orci, proin cum augue fermentum ultricies
@@ -20,6 +22,15 @@
                 suspendisse natoque arcu feugiat facilisi ullamcorper magnis curae, consequat dis habitant 
                 ad diam susci pit dapibus.
             </p>
+
+        <ul class="lista">
+            <li class="elemento darkelemento"><a href="Mobs.aspx"><%--<img class="image2" src="/images/zombieface.png" width="20"/>--%><p class="clase">Mobs</p></a></li>
+            <li class="elemento darkelemento"><a href="Biomes.aspx"><%--<img class="image2" src="/images/temple.png" width="20"/>--%><p class="clase">Biomas</p></a></li>
+            <li class="elemento darkelemento"><a href="Structures.aspx"><%--<img class="image2" src="/images/temple.png" width="20"/>--%><p class="clase">Estructuras</p></a></li>
+            <li class="elemento darkelemento"><a href="Tools.aspx"><%--<img class="image2" src="/images/tools.png" width="20"/>--%><p class="clase">Herramientas</p></a></li>
+            <li class="elemento darkelemento"><a href="Easter_eggs.aspx"><%--<img class="image2" src="/images/temple.png" width="20"/>--%><p class="clase">Easter Eggs</p></a></li>
+        </ul>
+            
     </div>
     
 

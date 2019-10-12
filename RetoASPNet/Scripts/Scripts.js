@@ -15,6 +15,7 @@ function cambiarTema() {
     var db = document.getElementById("dropbtnid");
     var ddc = document.getElementById("dd-contentid");
     var ppl = document.getElementById("principalid");
+    var f = document.getElementById("footerid");
 
     if (x.className === "darkbody") {
 
@@ -24,6 +25,7 @@ function cambiarTema() {
         db.className = "lightdropbtn dropbtn";
         ddc.className = "lightdd-content dd-content";
         ppl.className = "lightprincipal principal";
+        f.className = "lightfooter footer";
     }
     else {
 
@@ -32,6 +34,7 @@ function cambiarTema() {
         d.className = "darkdd dd";
         db.className = "darkdropbtn dropbtn";
         ddc.className = "darkdd-content dd-content";
-        ppl.className = "darkprincipal principal";
+        ppl.className="darkprincipal principal"
+        f.className = "darkfooter footer";
     }
 }

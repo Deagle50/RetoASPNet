@@ -29,8 +29,15 @@
         color: white;
     }
 
+    .darkelemento {
+        background-color: #404040;
+        border-radius:10px;
+        width:auto;
+    }
+
+
     /* Main div */
-    .darkprincipal {
+    .darkprincipal, .darkfooter {
         background-color: #4a4a4a;
     }
 
@@ -45,11 +52,11 @@
         color: #f2f2f2;
     }
 
-        /* Add a dark background on topnav links and the dropdown button on hover */
-        .darktopnav a:hover, .darkdd:hover .darkdropbtn {
-            background-color: #555;
-            color: white;
-        }
+    /* Add a dark background on topnav links and the dropdown button on hover */
+    .darktopnav a:hover, .darkdd:hover .darkdropbtn {
+        background-color: #555;
+        color: white;
+    }
 
 
 /*#endregion DARK THEME*/
@@ -79,9 +86,9 @@
         color: black;
     }
 
-    .lightprincipal {
-        background-color: #e3e3e3;
-    }
+.lightprincipal, .lightfooter {
+    background-color: #d1d1d1;
+}
 
     /* Topnav color */
     .lighttopnav {
@@ -137,6 +144,7 @@
         position: absolute;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border-radius: 10px;
     }
 
     /* Style the links inside the dropdown */
@@ -154,23 +162,34 @@
         display: block;
     }
 
-    /* Centers the footer */
-    footer {
-        width: 26%;
-        padding-left: 37%;
+    .dropbtn {
+        border-radius: 10px;
     }
 
+    /* Centers the footer */
+.footer {
+    width: 26%;
+    margin-left: 37%;
+    margin-bottom:20px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
     /* Adds padding to the links inside the footer */
-    footer a {
+    .footer a {
         padding: 10px;
     }
 
-/* Puts margins to main div */
-.principal {
-    border-radius:7px;
-    margin: 3% 14% 3% 14%;
-    padding: 10px 1% 10px 1%;
-}
+    /* Puts margins to main div */
+    .principal {
+        border-radius:20px;
+        margin: 2% 14% 3% 14%;
+        padding: 10px 1% 10px 1.5%;
+        height:800px;
+    }
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -185,6 +204,7 @@
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
+        border-radius: 10px;
     }
 
     /* Hide the link that should open and close the topnav on small screens */
@@ -194,6 +214,7 @@
 
 .topnav2 {
     margin-left: 12%;
+    
 }
 
 /*#endregion POSITION*/
@@ -265,8 +286,42 @@
 
 /*#region SOURCE*/
 
-.parrafoprincipal {
-    width:60%;
+
+
+.elemento {
+    margin:10px;
+    width:25%;
+    list-style-type:none;
 }
+
+    .elemento a:link {
+        text-decoration: none;
+    }
+
+    .elemento:hover {
+        background-color: #555;
+        
+    }
+
+.elemento .clase{
+    padding: 20px 20px 20px 30px;
+    color:white;
+}
+
+.image {
+    float:right;
+    width:25%;
+}
+
+.image2 {
+    padding: 10px 10px 5px 12px;
+}
+
+
+.lista {
+    display: block;
+    /*float: right;*/
+}
+
 
 /*#endregion SOURCE*/
