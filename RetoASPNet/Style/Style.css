@@ -188,7 +188,8 @@
         border-radius:20px;
         margin: 2% 14% 3% 14%;
         padding: 10px 1% 10px 1.5%;
-        height:800px;
+        /*height:800px;*/
+        
     }
 
 /* Add a black background color to the top navigation */
@@ -319,8 +320,7 @@
 
 
 .lista {
-    /*display: block;*/
-    /*float: right;*/
+    display:normal;
 }
 
 
