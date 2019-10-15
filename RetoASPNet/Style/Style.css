@@ -320,7 +320,8 @@
 
 
 .lista {
-    display:normal;
+    display:block;
+    float:right;
 }
 
 
