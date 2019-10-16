@@ -321,8 +321,17 @@
 
 .lista {
     display:block;
-    float:right;
+    /*float:right;*/
 }
 
 
 /*#endregion SOURCE*/
+
+/*#region MOBS*/
+
+.rows {
+    color:red;
+    background-color:red;
+}
+
+/*#endregion MOBS*/

@@ -49,15 +49,16 @@
                 eu sociis, viverra dictumst sagittis in erat aenean semper gravida cubilia nisi ridiculus, 
                 purus cras augue ante massa nisl nascetur molestie porta fusce. Hac ligula aptent erat 
                 suspendisse natoque arcu feugiat facilisi ullamcorper magnis curae, consequat dis habitant 
-                ad diam susci pit dapibus.          
-            </p>
-        <ul class="lista">            
+                ad diam susci pit dapibus.  
+                <ul class="lista">            
                 <li class="elemento darkelemento"><a href="Mobs.aspx"><%--<img class="image2" src="/images/zombieface.png" width="20"/>--%><p class="clase">Mobs</p></a></li>
-                <li class="elemento darkelemento"><a href="Biomes.aspx"><%--<img class="image2" src="/images/temple.png" width="20"/>--%><p class="clase">Biomas</p></a></li>
+                <li class="elemento darkelemento"><a href="Biomes.aspx"><%--<img class="image2" src="/images/.png" width="20"/>--%><p class="clase">Biomas</p></a></li>
                 <li class="elemento darkelemento"><a href="Structures.aspx"><%--<img class="image2" src="/images/temple.png" width="20"/>--%><p class="clase">Estructuras</p></a></li>
                 <li class="elemento darkelemento"><a href="Tools.aspx"><%--<img class="image2" src="/images/tools.png" width="20"/>--%><p class="clase">Herramientas</p></a></li>
-                <li class="elemento darkelemento"><a href="Easter_eggs.aspx"><%--<img class="image2" src="/images/temple.png" width="20"/>--%><p class="clase">Easter Eggs</p></a></li>
+                <li class="elemento darkelemento"><a href="Easter_eggs.aspx"><%--<img class="image2" src="/images/easter_eggs.png" width="20"/>--%><p class="clase">Easter Eggs</p></a></li>
             </ul> 
+            </p>
+        
         
 
         
