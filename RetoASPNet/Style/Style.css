@@ -164,6 +164,7 @@
 
     .dropbtn {
         border-radius: 10px;
+        height:100%;
     }
 
     /* Centers the footer */
@@ -329,9 +330,9 @@
 
 /*#region MOBS*/
 
-.rows {
+/*.rows {
     color:red;
     background-color:red;
-}
+}*/
 
 /*#endregion MOBS*/

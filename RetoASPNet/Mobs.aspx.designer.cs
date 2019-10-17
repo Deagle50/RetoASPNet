@@ -31,21 +31,21 @@ namespace RetoASPNet {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// Control DatosMinecraft.
+        /// Control TipoMob.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DatosMinecraft;
+        protected global::System.Web.UI.WebControls.SqlDataSource TipoMob;
         
         /// <summary>
-        /// Control DatosMobs.
+        /// Control MobsMinecraft.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DatosMobs;
+        protected global::System.Web.UI.WebControls.SqlDataSource MobsMinecraft;
     }
 }

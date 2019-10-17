@@ -10,23 +10,30 @@
                 
             </h1>    
 
-            <asp:DropDownList ID="DDLMobs" runat="server" DataSourceID="DatosMobs" DataTextField="Tipo" DataValueField="Mob_id">
+            <asp:DropDownList ID="DDLMobs" runat="server" DataSourceID="TipoMob" DataTextField="Tipo" DataValueField="Tipo" AutoPostBack="true">
                 </asp:DropDownList>            
 
-            <asp:GridView ID="GridView1" runat="server">
+            
+
+            <asp:GridView ID="GridView1" runat="server" DataSourceID="MobsMinecraft">
                 </asp:GridView>
 
+            
             <%-- Origen de datos --%>
-            <asp:SqlDataSource ID="DatosMinecraft" runat="server" ConnectionString="<%$ ConnectionStrings:DAM_Compartido_DEVConnectionString %>"
-                SelectCommand="SELECT * FROM Minecraft.Mobs WHERE (Tipo = @Tipo) GROUP BY Tipo">
+            <%-- Datos DDL Mob --%>
+            <asp:SqlDataSource ID="TipoMob" runat="server" ConnectionString="<%$ ConnectionStrings:DAM_Compartido_DEVConnectionString %>" 
+                SelectCommand="SELECT tipo FROM Minecraft.Mobs GROUP BY tipo"></asp:SqlDataSource>
+
+            <%-- Datos GridView --%>
+           <asp:SqlDataSource ID="MobsMinecraft" runat="server" ConnectionString="<%$ ConnectionStrings:DAM_Compartido_DEVConnectionString %>" 
+               SelectCommand="SELECT [mob_name], [biomes_id], [tipo], [healthpoints], [damage], [trigger_vision], [trigger_desc], [drop], [raredrop], [exp], [tool_id] 
+               FROM Minecraft.Mobs WHERE ([tipo] = @tipo)">
                 <SelectParameters>
-                    <asp:ControlParameter ControlID="DDLMobs" Name="Tipo" PropertyName="SelectedValue" Type="String" />
+                    <asp:ControlParameter ControlID="DDLMobs" Name="tipo" PropertyName="SelectedValue" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
+
             
-            <asp:SqlDataSource ID="DatosMobs" runat="server" ConnectionString="<%$ ConnectionStrings:DAM_Compartido_DEVConnectionString %>"
-                SelectCommand="SELECT * FROM Minecraft.Mobs"></asp:SqlDataSource>
-        
     </div>
 
 </asp:Content>
