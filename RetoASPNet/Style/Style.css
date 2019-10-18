@@ -185,13 +185,13 @@
     }
 
     /* Puts margins to main div */
-    .principal {
-        border-radius:20px;
-        margin: 2% 14% 3% 14%;
-        padding: 10px 1% 10px 1.5%;
-        /*height:800px;*/
-        
-    }
+.principal {
+    border-radius: 20px;
+    margin: 2% 14% 3% 14%;
+    padding: 10px 1% 10px 1.5%;
+    min-height: 500px;
+    /*height:800px;*/
+}
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -336,3 +336,24 @@
 }*/
 
 /*#endregion MOBS*/
+
+/*#region CONTACT*/
+
+.divcontacto {
+    width: 40%;
+    height: 200px;
+    margin-right: 0%;
+    float: left;
+}
+
+/*#map {
+    width: 40%;
+    height: 200px;
+}
+
+.mapn {
+    height: 100px;
+    width: 200px;
+}*/
+
+/*#endregion CONTACT*/
