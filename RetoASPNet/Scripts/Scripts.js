@@ -16,6 +16,8 @@ function cambiarTema() {
     var ddc = document.getElementById("dd-contentid");
     var ppl = document.getElementById("principalid");
     var f = document.getElementById("footerid");
+    var c = document.getElementById("contactoid");
+    var e = document.getElementsByClassName("elemento");
 
     if (x.className === "darkbody") {
 
@@ -26,6 +28,8 @@ function cambiarTema() {
         ddc.className = "lightdd-content dd-content";
         ppl.className = "lightprincipal principal";
         f.className = "lightfooter footer";
+        c.className = "lightcontacto contacto";
+        e.className ="lightelemento elemento"
     }
     else {
 
@@ -36,6 +40,8 @@ function cambiarTema() {
         ddc.className = "darkdd-content dd-content";
         ppl.className="darkprincipal principal"
         f.className = "darkfooter footer";
+        c.className = "darkcontacto contacto";
+        e.className = "darkelemento elemento";
     }
 }
 

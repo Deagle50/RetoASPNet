@@ -1,0 +1,120 @@
+﻿
+/*#region COLORS*/
+
+/*#region DARK THEME*/
+
+/*Gives dark color to body */
+.darkbody {
+    background-color: #404040;
+    color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.darkdd-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.darkdd .darkdropbtn {
+    outline: none;
+    color: white;
+    background-color: inherit;
+}
+
+/* Colors from the links inside the dropdown list */
+.darkdd-content {
+    background-color: #404040;
+    color: white;
+}
+
+.darkelemento {
+    background-color: #404040;
+    border-radius: 10px;
+    width: auto;
+}
+
+
+/* Main div */
+.darkprincipal, .darkfooter {
+    background-color: #4a4a4a;
+}
+
+/* Topnav color */
+.darktopnav {
+    background-color: #333;
+}
+
+
+
+    .darktopnav a {
+        color: #f2f2f2;
+    }
+
+        /* Add a dark background on topnav links and the dropdown button on hover */
+        .darktopnav a:hover, .darkdd:hover .darkdropbtn {
+            background-color: #555;
+            color: white;
+        }
+
+
+/*#endregion DARK THEME*/
+
+/*#region LIGHT THEME*/
+
+/* Gives light color to body */
+.lightbody {
+    background-color: #e6e6e6;
+    color: black;
+}
+
+.lightdd-content a:hover {
+    background-color: #444;
+    color: white;
+}
+
+.lightdd .lightdropbtn {
+    outline: none;
+    color: black;
+    background-color: inherit;
+}
+
+/* Colors from the links inside the dropdown list*/
+.lightdd-content {
+    background-color: white;
+    color: black;
+}
+
+.lightprincipal, .lightfooter {
+    background-color: #d1d1d1;
+}
+
+/* Topnav color */
+.lighttopnav {
+    background-color: #ccc;
+}
+
+    /* Topnav a's colors */
+    .lighttopnav a, .lightdropbtn {
+        color: black;
+    }
+
+        /* Add a light background on topnav links and the dropdown button on hover */
+        .lighttopnav a:hover, .lightdd:hover {
+            background-color: #eee;
+            color: black;
+        }
+
+/*#endregion LIGHT THEME*/
+
+/*#region More colors*/
+
+/* Add an active class to highlight the current page, and adds margin to the left */
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*#endregion More colors*/
+
+
+/*#endregion COLORS*/

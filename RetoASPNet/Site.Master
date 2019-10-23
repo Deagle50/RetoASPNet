@@ -9,29 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
 
-    <%-- Style OpenLayerMaps --%>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css" type="text/css">
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/build/ol.js"></script>
-
     <%-- CSS propio --%>
-        <link href="style/style.css" rel="stylesheet" type="text/css"/>
+        <link href="~/Style/style.css" rel="stylesheet" type="text/css"/>   
 
-
-    <%-- Script material design 2.0 --%>
+    <%-- OpenLayerMaps Script and CSS--%>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css" type="text/css">
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/build/ol.js"></script>    
     
-        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <%-- JavaScript Scripts.js --%>
+        <script src="Scripts/Scripts.js"></script>    
 
     <%-- Material design 2 MUI --%>
         <link href="//cdn.muicss.com/mui-0.9.43/css/mui.min.css" rel="stylesheet" type="text/css" />
         <script src="//cdn.muicss.com/mui-0.9.43/js/mui.min.js"></script>
-
-
-    <!--Bootstrap-->
-
-        <%--<link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.css" media="screen">
-        <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">--%>
 
 </head>
 <body id="cuerpo" class="darkbody">
@@ -54,10 +44,13 @@
                 </div>
             </div>
             <a id="sbabout" runat="server" href="About.aspx">Sobre nosotros</a>
-            <a id="sbcontact" runat="server" href="Contact.aspx">Contacto</a>
+            <a id="sbcontact" runat="server" href="Contact.aspx">Contacto</a>           
             
             
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+            <div class="login">
+                <a id="idlogin" href="Login.aspx">Login</a>
+                <a id="idregister" href="Register.aspx">Register</a>
             </div>
         </div>
 

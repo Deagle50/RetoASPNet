@@ -160,6 +160,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Structures.aspx" />
+    <Content Include="Style\colors.css" />
     <Content Include="Style\Style.css" />
     <Content Include="Tools.aspx" />
     <Content Include="ViewSwitcher.ascx" />

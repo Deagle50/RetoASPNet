@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="Página principal" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Source.aspx.cs"%>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-        <%-- CSS propio --%>
-        <link href="style/style.css" rel="stylesheet" type="text/css"/>
+    
+<%--        --%>
     <div class="darkprincipal principal" id="principalid">
         <h1 class="titulo"><%:Page.Title %></h1>
             <p class="parrafoprincipal">
@@ -50,7 +50,7 @@
                 purus cras augue ante massa nisl nascetur molestie porta fusce. Hac ligula aptent erat 
                 suspendisse natoque arcu feugiat facilisi ullamcorper magnis curae, consequat dis habitant 
                 ad diam susci pit dapibus.  
-                <ul class="lista">            
+                <ul class="lista darklista" id="listaid">            
                     <li class="elemento darkelemento"><a href="Mobs.aspx"><%--<img class="image2" src="/images/zombieface.png" width="20"/>--%><p class="clase">Mobs</p></a></li>
                     <li class="elemento darkelemento"><a href="Biomes.aspx"><%--<img class="image2" src="/images/.png" width="20"/>--%><p class="clase">Biomas</p></a></li>
                     <li class="elemento darkelemento"><a href="Structures.aspx"><%--<img class="image2" src="/images/temple.png" width="20"/>--%><p class="clase">Estructuras</p></a></li>
