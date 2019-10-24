@@ -11,13 +11,10 @@
             </h1>    
 
             <asp:DropDownList ID="DDLMobs" runat="server" DataSourceID="TipoMob" DataTextField="Tipo" DataValueField="Tipo" AutoPostBack="true">
-                </asp:DropDownList>            
-
-            
+                </asp:DropDownList>                        
 
             <asp:GridView ID="GridView1" runat="server" DataSourceID="MobsMinecraft">
                 </asp:GridView>
-
             
             <%-- Origen de datos --%>
             <%-- Datos DDL Mob --%>
@@ -26,7 +23,7 @@
 
             <%-- Datos GridView --%>
            <asp:SqlDataSource ID="MobsMinecraft" runat="server" ConnectionString="<%$ ConnectionStrings:DAM_Compartido_DEVConnectionString %>" 
-               SelectCommand="SELECT [mob_name], [biomes_id], [tipo], [healthpoints], [damage], [trigger_vision], [trigger_desc], [drop], [raredrop], [exp], [tool_id] 
+               SelectCommand="SELECT [image],[mob_name], [biomes_id], [tipo], [healthpoints], [damage], [trigger_vision], [trigger_desc], [drop], [raredrop], [exp], [tool_id] 
                FROM Minecraft.Mobs WHERE ([tipo] = @tipo)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="DDLMobs" Name="tipo" PropertyName="SelectedValue" Type="String" />

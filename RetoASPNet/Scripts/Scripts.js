@@ -18,6 +18,7 @@ function cambiarTema() {
     var f = document.getElementById("footerid");
     var c = document.getElementById("contactoid");
     var e = document.getElementsByClassName("elemento");
+    var fm = document.getElementById("formularioid");
 
     if (x.className === "darkbody") {
 
@@ -29,7 +30,8 @@ function cambiarTema() {
         ppl.className = "lightprincipal principal";
         f.className = "lightfooter footer";
         c.className = "lightcontacto contacto";
-        e.className ="lightelemento elemento"
+        e.className = "lightelemento elemento";
+        fm.className = "lightformulario formulario";
     }
     else {
 
@@ -42,6 +44,7 @@ function cambiarTema() {
         f.className = "darkfooter footer";
         c.className = "darkcontacto contacto";
         e.className = "darkelemento elemento";
+        fm.className = "darkformulario formulario";
     }
 }
 

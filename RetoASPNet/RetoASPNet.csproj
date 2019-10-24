@@ -115,6 +115,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Easter_eggs.aspx" />
     <Content Include="Mobs.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Scripts\Scripts.js" />
     <Content Include="Source.aspx" />
     <Content Include="favicon.ico" />
@@ -205,6 +206,13 @@
     </Compile>
     <Compile Include="Mobs.aspx.designer.cs">
       <DependentUpon>Mobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Source.aspx.cs">
       <DependentUpon>Source.aspx</DependentUpon>

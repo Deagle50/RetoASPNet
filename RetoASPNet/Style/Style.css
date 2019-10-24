@@ -44,7 +44,10 @@
     width: auto;
 }
 
-
+/* Register page form*/
+.darkformulario {
+    background-color:#404040;
+}
 
 /* Main div */
 .darkprincipal, .darkfooter {
@@ -64,7 +67,7 @@
 
         /* Add a dark background on topnav links and the dropdown button on hover */
         .darktopnav a:hover, .darkdd:hover .darkdropbtn {
-            border-radius:10px;
+            border-radius:7px;
             background-color: #555;
             color: white;
         }
@@ -109,6 +112,10 @@
     background-color: #e6e6e6;
 }
 
+.lightformulario {
+    background-color:#e6e6e6;
+}
+
 .lightprincipal, .lightfooter {
     background-color: #d1d1d1;
 }
@@ -125,7 +132,7 @@
 
         /* Add a light background on topnav links and the dropdown button on hover */
         .lighttopnav a:hover, .lightdd:hover {
-            border-radius: 10px;
+            border-radius: 7px;
             background-color: #eee;
             color: black;
         }
@@ -174,7 +181,7 @@
         position: absolute;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        border-radius: 10px;
+        border-radius: 7px;
     }
 
     /* Style the links inside the dropdown */
@@ -193,7 +200,7 @@
     }
 
     .dropbtn {
-        border-radius: 10px;
+        border-radius: 7px;
         height:100%;
     }
 
@@ -202,7 +209,7 @@
     width: 26%;
     margin-left: 37%;
     margin-bottom:20px;
-    border-radius: 10px;
+    border-radius: 100px;
     padding-left: 15px;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -215,7 +222,7 @@
     }
 
 .login{
-    border-radius:10px;
+    border-radius:7px;
     display:block;
     float:right;    
     margin-right:12%;
@@ -243,7 +250,7 @@
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
-        border-radius: 10px;
+        border-radius: 7px;
     }
 
     /* Hide the link that should open and close the topnav on small screens */
@@ -377,10 +384,12 @@
 /*#region CONTACT*/
 
 .divcontacto {
-    width: 60%;
+    border-radius:10px;
+    width: 40%;
     height: 200px;
-    margin-right: 0%;
-    float: left;
+    padding:2%;
+    margin:0px;
+    float:left;
 }
 
 .contacto {
@@ -400,3 +409,59 @@
     float: right;
 }
 /*#endregion CONTACT*/
+
+/*#region REGISTER*/
+.formulario {
+    width: 40%;
+    height:auto;
+    margin: 0 auto;
+    padding: 1.7% 2.2% 6.2% 2.2%;
+    border-radius: 6px;    
+}
+.btnr {
+    background-color: #4CAF50;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    padding: 2%;
+    margin-top: 3%;    
+    width: 20%;
+    font: 100%;
+    float: right;
+}
+
+
+.lbl {
+    margin-top:1.6%;
+    font-size:75%;    
+}
+
+.lbla {
+    width:48%;
+    float:left;
+}
+
+.lblb {
+    width:48%;
+    float:right;
+}
+
+.lblError {
+    margin-top:8%;
+    width: 70%;
+    color:red;
+}
+
+.txt {
+    background-color: transparent;
+    border-color: #8fceff;
+    border-width: 1.3px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color:white;
+}
+
+
+
+/*#endregion REGISTER*/

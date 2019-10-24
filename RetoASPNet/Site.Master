@@ -49,8 +49,8 @@
             
             </div>
             <div class="login">
-                <a id="idlogin" href="Login.aspx">Login</a>
-                <a id="idregister" href="Register.aspx">Register</a>
+                <a id="idlogin" href="Login.aspx">Iniciar sesión</a>
+                <a id="idregister" href="Register.aspx">Registrarse</a>
             </div>
         </div>
 
