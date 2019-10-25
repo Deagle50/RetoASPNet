@@ -9,10 +9,11 @@
             <h1 class="titulo"><%:Page.Title %>
                 
             </h1>    
-
+            <%-- DropDownList de tipos de mobs --%>
             <asp:DropDownList ID="DDLMobs" runat="server" DataSourceID="TipoMob" DataTextField="Tipo" DataValueField="Tipo" AutoPostBack="true">
                 </asp:DropDownList>                        
 
+            <%-- GridView con los mobs escogidos en el DDL, por defecto, de "Hostiles" --%>
             <asp:GridView ID="GridView1" runat="server" DataSourceID="MobsMinecraft">
                 </asp:GridView>
             
