@@ -49,6 +49,10 @@
     background-color:#404040;
 }
 
+.darklogin {
+    background-color: #5c5c5c;
+}
+
 /* Main div */
 .darkprincipal, .darkfooter {
     background-color: #4a4a4a;

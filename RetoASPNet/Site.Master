@@ -22,7 +22,20 @@
     <%-- Material design 2 MUI --%>
         <link href="//cdn.muicss.com/mui-0.9.43/css/mui.min.css" rel="stylesheet" type="text/css" />
         <script src="//cdn.muicss.com/mui-0.9.43/js/mui.min.js"></script>
+    <style type="text/css">
+        /* The popup form - hidden by default */
 
+        .form-popup {
+            top:52px;
+            display: block;
+            position: fixed;
+            top: 5%;
+            border: 1px solid gray;
+            border-radius: 7px;
+            z-index: 9;
+            background-color: #5c5c5c;
+        }
+    </style>
 </head>
 <body id="cuerpo" class="darkbody">
     <form runat="server">
@@ -49,7 +62,21 @@
             
             </div>
             <div class="login">
-                <a id="idlogin" href="Login.aspx">Iniciar sesión</a>
+                <a id="idlogin" href="javascript:void(0);" onclick="closeForm()">Iniciar sesión</a>
+                <div class="form-popup darklogin" id="loginForm">
+                  <form <%--action="/action_page.php"--%> class="form-container ">
+                    <h1>Login</h1>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit" class="btn">Login</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                  </form>
+                </div>
                 <a id="idregister" href="Register.aspx">Registrarse</a>
             </div>
         </div>
@@ -65,7 +92,7 @@
                          &nbsp;- &nbsp;Minecraft &nbsp;
                         <a runat="server" href="~/About">Sobre nosotros</a> 
                         <a runat="server" href="~/Contact">Contacto</a> 
-                        <a href="javascript:void(0);" onclick="cambiarTema()">Tema</a>
+                        <a href="#" onclick="cambiarTema()">Tema</a>
                         <a runat="server" href="#">Idioma</a>
                 </footer>
                     </div>
@@ -87,6 +114,27 @@
                 zoom: 18
             })
         });
+
+        function openForm() {
+            
+            var l = document.getElementById("loginForm");
+            alert(l);
+            l.style.display= "block";
+            l.onclick=function() {
+                closeForm();
+            };
+            
+        }
+
+        function closeForm() {
+            var l = document.getElementById("loginForm");
+            alert(l+"close");
+            l.style.display = "none";
+            l.onclick = function () {
+                openForm();
+            };
+            
+        }
     </script>
         
 </body>
