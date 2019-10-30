@@ -114,6 +114,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Easter_eggs.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Mobs.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\Scripts.js" />
@@ -199,6 +200,13 @@
     </Compile>
     <Compile Include="Easter_eggs.aspx.designer.cs">
       <DependentUpon>Easter_eggs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mobs.aspx.cs">
       <DependentUpon>Mobs.aspx</DependentUpon>

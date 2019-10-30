@@ -24,16 +24,19 @@ namespace RetoASPNet
             {
                 SqlCommand comando = new SqlCommand("Minecraft.Registrar_Insertar", sqlConn);
                 comando.CommandType = CommandType.StoredProcedure;
-                if (txtPass.Text == txtPass2.Text)
+                
+                if (txtPass1.Value == txtPass2.Value)
                 {
-                    comando.Parameters.AddWithValue("@usuario", txtUsuario.Text);
-                    comando.Parameters.AddWithValue("@pass", txtPass.Text);
-                    comando.Parameters.AddWithValue("@nombre", txtNombre.Text);
-                    comando.Parameters.AddWithValue("@apellido", txtApellido.Text);
-                    comando.Parameters.AddWithValue("@fecha", txtFec.Text);
+                    comando.Parameters.AddWithValue("@usuario", txtUser.Value);
+                    comando.Parameters.AddWithValue("@pass", txtPass1.Value);
+                    comando.Parameters.AddWithValue("@nombre", txtName.Value);
+                    comando.Parameters.AddWithValue("@correo", txtEmail.Value);
+                    comando.Parameters.AddWithValue("@apellido", txtLastname.Value);
+                    comando.Parameters.AddWithValue("@fecha", txtDate.Value);
                     sqlConn.Open();
                     comando.ExecuteNonQuery();
                     sqlConn.Close();
+                    Response.Redirect("source.aspx");
                 }
                 else
                     lblError.Text = "Error: las contraseñas tienen que ser iguales";

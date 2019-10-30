@@ -26,7 +26,7 @@
         /* The popup form - hidden by default */
 
         .form-popup {
-            top:52px;
+            
             display: block;
             position: fixed;
             top: 5%;
@@ -62,21 +62,8 @@
             
             </div>
             <div class="login">
-                <a id="idlogin" href="javascript:void(0);" onclick="closeForm()">Iniciar sesión</a>
-                <div class="form-popup darklogin" id="loginForm">
-                  <form <%--action="/action_page.php"--%> class="form-container ">
-                    <h1>Login</h1>
-
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-
-                    <button type="submit" class="btn">Login</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                  </form>
-                </div>
+                <a id="idlogin" href="login.aspx">Iniciar sesión</a>
+                
                 <a id="idregister" href="Register.aspx">Registrarse</a>
             </div>
         </div>
@@ -115,26 +102,7 @@
             })
         });
 
-        function openForm() {
-            
-            var l = document.getElementById("loginForm");
-            alert(l);
-            l.style.display= "block";
-            l.onclick=function() {
-                closeForm();
-            };
-            
-        }
-
-        function closeForm() {
-            var l = document.getElementById("loginForm");
-            alert(l+"close");
-            l.style.display = "none";
-            l.onclick = function () {
-                openForm();
-            };
-            
-        }
+        
     </script>
         
 </body>
