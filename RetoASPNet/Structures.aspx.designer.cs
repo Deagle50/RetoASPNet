@@ -11,5 +11,23 @@ namespace RetoASPNet {
     
     
     public partial class Structures {
+        
+        /// <summary>
+        /// Control GVStructures.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GVStructures;
+        
+        /// <summary>
+        /// Control StructuresMinecraft.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource StructuresMinecraft;
     }
 }

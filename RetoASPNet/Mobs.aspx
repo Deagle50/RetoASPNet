@@ -10,7 +10,7 @@
                 
             </h1>    
             <%-- DropDownList de tipos de mobs --%>
-            <asp:DropDownList ID="DDLMobs" runat="server" DataSourceID="TipoMob" DataTextField="Tipo" DataValueField="Tipo" AutoPostBack="true">
+            <asp:DropDownList ID="DDLMobs" runat="server" DataSourceID="TipoMob" DataTextField="mob_type" DataValueField="mob_type" AutoPostBack="true">
                 </asp:DropDownList>                        
 
             <%-- GridView con los mobs escogidos en el DDL, por defecto, de "Hostiles" --%>
@@ -20,12 +20,16 @@
             <%-- Origen de datos --%>
             <%-- Datos DDL Mob --%>
             <asp:SqlDataSource ID="TipoMob" runat="server" ConnectionString="<%$ ConnectionStrings:DAM_Compartido_DEVConnectionString %>" 
-                SelectCommand="SELECT tipo FROM Minecraft.Mobs GROUP BY tipo"></asp:SqlDataSource>
+                SelectCommand="SELECT mob_type FROM Minecraft.Mobs GROUP BY mob_type"></asp:SqlDataSource>
 
             <%-- Datos GridView --%>
            <asp:SqlDataSource ID="MobsMinecraft" runat="server" ConnectionString="<%$ ConnectionStrings:DAM_Compartido_DEVConnectionString %>" 
-               SelectCommand="SELECT [image],[mob_name], [biomes_id], [tipo], [healthpoints], [damage], [trigger_vision], [trigger_desc], [drop], [raredrop], [exp], [tool_id] 
-               FROM Minecraft.Mobs WHERE ([tipo] = @tipo)">
+               SelectCommand="SELECT image, mob_name, biome_name, mob_type, healthpoints, damage, trigger_vision, trigger_desc, [drop], raredrop, exp
+               FROM Minecraft.Mobs 
+               JOIN Minecraft.Biomes
+               ON Minecraft.Biomes.Biome_id = Minecraft.Mobs.Biome_id              
+               WHERE (Minecraft.Mobs.mob_type = @tipo)">
+               
                 <SelectParameters>
                     <asp:ControlParameter ControlID="DDLMobs" Name="tipo" PropertyName="SelectedValue" Type="String" />
                 </SelectParameters>
