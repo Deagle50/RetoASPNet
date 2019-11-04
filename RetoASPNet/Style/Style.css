@@ -376,15 +376,6 @@
 
 /*#endregion SOURCE*/
 
-/*#region MOBS*/
-
-/*.rows {
-    color:red;
-    background-color:red;
-}*/
-
-/*#endregion MOBS*/
-
 /*#region CONTACT*/
 
 .divcontacto {
@@ -469,3 +460,7 @@
 
 
 /*#endregion REGISTER*/
+
+.tablerow{
+    height:72px;
+}

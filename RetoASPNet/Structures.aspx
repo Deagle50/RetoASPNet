@@ -7,23 +7,36 @@
     <div class="darkprincipal principal" id="principalid">
         
             <h1 class="titulo"><%:Page.Title %></h1>    
-        <%-- GridView of structures --%>
-            <asp:GridView ID="GVStructures" runat="server" DataSourceID="StructuresMinecraft">
-                </asp:GridView>
             
-            <%-- Origen de datos --%>
-            <%-- Datos GridView --%>
-           <asp:SqlDataSource ID="StructuresMinecraft" runat="server" ConnectionString="<%$ ConnectionStrings:DAM_Compartido_DEVConnectionString %>" 
-               SelectCommand="SELECT struct_name, biome_name, struct_desc, size, tool_name, dimension_name
-               FROM Minecraft.Structures
-               JOIN Minecraft.Biomes
-               ON Minecraft.Biomes.biome_id = Minecraft.Structures.biome_id
-               JOIN Minecraft.Tools
-               ON Minecraft.Tools.tool_id = Minecraft.Structures.tool_id
-               JOIN Minecraft.Dimensions
-               ON Minecraft.Dimensions.dimension_id = Minecraft.Dimensions.dimension_id
-               WHERE Dimensions.dimension_id = Structures.dimension_id">
-            </asp:SqlDataSource>
+        <div class="tabla">
+               
+            <table style="width:100%;">
+                <tr>
+                    <th>Estructura</th>               
+                    <th>Descripción</th>
+                    <th>Bioma</th>
+                    <th>Tamaño</th>
+                    <th>Objetos</th>
+                    <th>Dimensiones</th>
+                    
+
+                </tr>
+            <asp:Repeater ID="structuresRepeater" runat="server">
+                <ItemTemplate>
+                            <tr>  
+                                <%--<td class="tablerow"><img src="<%# Eval("image") %>" /></td>--%>
+                                <td class="tablerow"><%# Eval("struct_name") %></td>
+                                <td class="tablerow"><%# Eval("struct_desc") %></td>
+                                <td class="tablerow"><%# Eval("biome_name") %></td>                                
+                                <td class="tablerow"><%# Eval("size") %></td>                                
+                                <td class="tablerow"><%# Eval("tool_name") %></td>
+                                <td class="tablerow"><%# Eval("dimension_name") %></td>
+                                
+                            </tr>
+                </ItemTemplate>
+            </asp:Repeater>
+            </table>
+        </div>
     </div>
 
 </asp:Content>

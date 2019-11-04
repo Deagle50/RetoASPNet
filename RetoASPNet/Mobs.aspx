@@ -2,40 +2,44 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-        
-
-    <div class="darkprincipal principal" id="principalid">
-        
-            <h1 class="titulo"><%:Page.Title %>
-                
-            </h1>    
-            <%-- DropDownList de tipos de mobs --%>
-            <asp:DropDownList ID="DDLMobs" runat="server" DataSourceID="TipoMob" DataTextField="mob_type" DataValueField="mob_type" AutoPostBack="true">
-                </asp:DropDownList>                        
-
-            <%-- GridView con los mobs escogidos en el DDL, por defecto, de "Hostiles" --%>
-            <asp:GridView ID="GridView1" runat="server" DataSourceID="MobsMinecraft">
-                </asp:GridView>
-            
-            <%-- Origen de datos --%>
-            <%-- Datos DDL Mob --%>
-            <asp:SqlDataSource ID="TipoMob" runat="server" ConnectionString="<%$ ConnectionStrings:DAM_Compartido_DEVConnectionString %>" 
-                SelectCommand="SELECT mob_type FROM Minecraft.Mobs GROUP BY mob_type"></asp:SqlDataSource>
-
-            <%-- Datos GridView --%>
-           <asp:SqlDataSource ID="MobsMinecraft" runat="server" ConnectionString="<%$ ConnectionStrings:DAM_Compartido_DEVConnectionString %>" 
-               SelectCommand="SELECT image, mob_name, biome_name, mob_type, healthpoints, damage, trigger_vision, trigger_desc, [drop], raredrop, exp
-               FROM Minecraft.Mobs 
-               JOIN Minecraft.Biomes
-               ON Minecraft.Biomes.Biome_id = Minecraft.Mobs.Biome_id              
-               WHERE (Minecraft.Mobs.mob_type = @tipo)">
+    <div class="darkprincipal principal" id="principalid">        
+            <h1 class="titulo"><%:Page.Title %></h1>    
+            <div class="tabla">
                
-                <SelectParameters>
-                    <asp:ControlParameter ControlID="DDLMobs" Name="tipo" PropertyName="SelectedValue" Type="String" />
-                </SelectParameters>
-            </asp:SqlDataSource>
+            <table style="width:100%;">
+                <tr>
+                    <th>Imagen</th>
+                    <th>Mob</th>
+                    <th>Bioma</th>
+                    <th>Tipo de mob</th>
+                    <th>Vida</th>
+                    <th>Daño</th>
+                    <th>Distancia de visión</th>
+                    <th>Descripción</th>
+                    <th>Drops</th>
+                    <th>Raredrops</th>
+                    <th>Exp</th>
 
-            
+                </tr>
+            <asp:Repeater ID="mobsRepeater" runat="server">
+                <ItemTemplate>
+                            <tr>  
+                                <td class="tablerow"><img src="<%# Eval("image") %>" alt="<%# Eval("image") %>" /></td>
+                                <td class="tablerow"><%# Eval("mob_name") %></td>
+                                <td class="tablerow"><%# Eval("biome_name") %></td>
+                                <td class="tablerow"><%# Eval("mob_type") %></td>
+                                <td class="tablerow"><%# Eval("healthpoints") %></td>
+                                <td class="tablerow"><%# Eval("damage") %></td>                                
+                                <td class="tablerow"><%# Eval("trigger_vision") %></td>
+                                <td class="tablerow" style="width:35%;"><%# Eval("trigger_desc") %></td>
+                                <td class="tablerow"><%# Eval("drop") %></td>
+                                <td class="tablerow"><%# Eval("raredrop") %></td>
+                                <td class="tablerow"><%# Eval("exp") %></td>
+                            </tr>
+                </ItemTemplate>
+            </asp:Repeater>
+            </table>
+        </div>
     </div>
 
 </asp:Content>

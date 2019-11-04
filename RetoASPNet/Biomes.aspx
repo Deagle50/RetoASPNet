@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Biomes" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Biomes.aspx.cs" %>
+﻿<%@ Page Title="Biomas" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Biomes.aspx.cs" Inherits="RetoASPNet.Biomes" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
@@ -9,17 +9,22 @@
          
                            
 
-            <%-- GridView con los mobs escogidos en el DDL, por defecto, de "Hostiles" --%>
-            <asp:GridView ID="GridView1" runat="server" DataSourceID="BiomesMinecraft">
-                </asp:GridView>
-            
-            <%-- Origen de datos --%>
-            <%-- Datos GridView --%>
-           <asp:SqlDataSource ID="BiomesMinecraft" runat="server" ConnectionString="<%$ ConnectionStrings:DAM_Compartido_DEVConnectionString %>" 
-               SelectCommand="SELECT biome_name, type, [desc]
-               FROM Minecraft.Biomes">
+            <div class="tabla">
+               
+          <table style="width:100%;">
                 
-            </asp:SqlDataSource>
+            <asp:Repeater ID="biomesRepeater" runat="server">
+                <ItemTemplate>
+                            <tr>  
+                                <%--<td class="tablerow"><img src="<%# Eval("image") %>" /></td>--%>                                
+                                <td class="tablerow"><%# Eval("biome_name") %></td>
+                                <td class="tablerow"><%# Eval("type") %></td>
+                                <td class="tablerow"><%# Eval("desc") %></td>
+                            </tr>
+                </ItemTemplate>
+            </asp:Repeater>
+            </table>
+        </div>
         </div>
     
 

@@ -8,11 +8,20 @@
         
             <h1 class="titulo"><%:Page.Title %></h1>    
         <div class="tabla">
+               
             <table style="width:100%;">
+                <tr>
+                    <%--<th>Imagen</th>--%>
+                    <th>Herramienta</th>
+                    <th>Recursos necesarios</th>
+                    <th>Durabilidad</th>
+                    <th>Daño</th>
+                    <th>Armadura</th>
+
+                </tr>
             <asp:Repeater ID="toolsRepeater" runat="server">
                 <ItemTemplate>
-                            <tr>
-                                <%--<td class="tablerow"><%# Eval("Tool_id") %></td>--%>
+                            <tr>                                
                                 <%--<td class="tablerow"><%# Eval("Tool_image") %></td>--%>
                                 <td class="tablerow"><%# Eval("Tool_name") %></td>
                                 <td class="tablerow"><%# Eval("resources") %></td>

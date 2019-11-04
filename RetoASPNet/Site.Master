@@ -59,10 +59,10 @@
             <a id="sbabout" runat="server" href="About.aspx">Sobre nosotros</a>
             <a id="sbcontact" runat="server" href="Contact.aspx">Contacto</a>           
             
-            
+            <p id="iduser" style="float:right;">aasdasdasda</p>
             </div>
             <div class="login">
-                <p id="iduser"></p>
+                
                 <a id="idlogin" href="login.aspx">Iniciar sesión</a>
                 
                 <a id="idregister" href="Register.aspx">Registrarse</a>
