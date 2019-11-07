@@ -9,12 +9,13 @@
                     
 
                     <label for="email" class="lbla lbl">Email</label><br /><br/>
-                    <input type="email" class="lbla txt" style="width:100%;" placeholder="Correo electrónico" name="email" required><br />
+                    <input runat="server" type="email" class="lbla txt" id="txtEmail" style="width:100%;" placeholder="Correo electrónico" name="email" required><br />
 
-                    <label for="psw" class="lbla lbl">Password</label><br/><br/>
-                    <input type="password" class="lbla txt" style="width:100%;" placeholder ="Contraseña" name="psw" required>
-
-                    <br /><button type="submit" class="btnr" style="margin-top:20px;" >Login</button>
+                    <%--<label for="psw" class="lbla lbl" id="lblPass">Password</label>--%>
+                    <asp:Label ID="lblPass" CssClass="lbla lbl" runat="server" Text="Password"></asp:Label><br/><br/>
+                    <input runat="server" type="password" class="lbla txt" id="txtPass" style="width:100%;" placeholder ="Contraseña" name="psw" required>
+                    <label id="idlabelincorrecto" style="color:red;" runat="server">&nbsp;</label>
+                    <br /><asp:Button ID="btnLogin" runat="server" Text="Log in" CssClass="btnr" OnClick="btnLogin_Click" />
                 </div>
             </div>
     </div>

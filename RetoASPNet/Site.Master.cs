@@ -31,13 +31,21 @@ namespace RetoASPNet
                 var item = (HtmlAnchor)FindControl("sbcontact");
                 item.Attributes.Add("class", CssClass);
             }
-            //else if (path.Contains("Mobs") || path.Contains("Biomes") || path.Contains("Structures") || path.Contains("Tools") || path.Contains("Easter_eggs"))
-            //{
-            //    var item = (HtmlAnchor)FindControl("drpbtnid");
-            //    item.Attributes.Add("class", "darkdropbtn dropbtn active");
-            //}
 
+            if (Session["Usuario"] != null)
+            {
+                lblUser.InnerText = Session["Usuario"].ToString();
+                idlogin.InnerText = "Cerrar sesión";               
+            }
+           
         }
-            
+        public void login_Click(object sender, EventArgs e)
+        {
+            Session["Usuario"] = null;
+            idlogin.InnerText = "Iniciar sesion";           
+            Response.Redirect("login.aspx");
+        }
+
+        
     }
 }

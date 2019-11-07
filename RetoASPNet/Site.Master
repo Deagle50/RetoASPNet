@@ -59,13 +59,18 @@
             <a id="sbabout" runat="server" href="About.aspx">Sobre nosotros</a>
             <a id="sbcontact" runat="server" href="Contact.aspx">Contacto</a>           
             
-            <p id="iduser" style="float:right;">aasdasdasda</p>
+            
             </div>
-            <div class="login">
+            
                 
-                <a id="idlogin" href="login.aspx">Iniciar sesión</a>
+            <a ID="lblUser" runat="server" Text="" style="background-color:#333333; border-radius:0px; float:left;"></a>
+            <div class="login" style="background-color:#333333;">
                 
-                <a id="idregister" href="Register.aspx">Registrarse</a>
+                <%--<a id="iduser" runat="server"></a>--%>
+                <%--<a href="#"  runat="server"  önclick="<% getPKWhales();%>" style="height:7px;width:40px;border:outset">PK</a>--%>
+                <a id="idlogin" href="#" onserverclick="login_Click" style="background-color:#4CAF50;border-radius:7px 0px 0px 7px;" runat="server">Iniciar sesión</a>
+                
+                <a id="idregister" href="Register.aspx" style="background-color:#4CAF50;border-radius:0px 7px 7px 0px;">Registrarse</a>
             </div>
         </div>
 
