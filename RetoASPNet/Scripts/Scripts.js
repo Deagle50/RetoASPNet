@@ -16,6 +16,9 @@ function cambiarTema() {
     var ddc = document.getElementById("dd-contentid");
     var ppl = document.getElementById("principalid");
     var f = document.getElementById("footerid");
+    var c = document.getElementById("contactoid");
+    var e = document.getElementsByClassName("elemento");
+    var fm = document.getElementById("formularioid");
 
     if (x.className === "darkbody") {
 
@@ -26,6 +29,9 @@ function cambiarTema() {
         ddc.className = "lightdd-content dd-content";
         ppl.className = "lightprincipal principal";
         f.className = "lightfooter footer";
+        c.className = "lightcontacto contacto";
+        e.className = "lightelemento elemento";
+        fm.className = "lightformulario formulario";
     }
     else {
 
@@ -36,5 +42,18 @@ function cambiarTema() {
         ddc.className = "darkdd-content dd-content";
         ppl.className="darkprincipal principal"
         f.className = "darkfooter footer";
+        c.className = "darkcontacto contacto";
+        e.className = "darkelemento elemento";
+        fm.className = "darkformulario formulario";
     }
+}
+
+function cambiarActive(elem) {
+    alert("a");
+    var a = document.getElementsByTagName('a');
+    for (i = 0; i < a.length; i++)
+    {
+        a[i].classList.remove('active');
+    }
+    elem.classList.add('active');
 }

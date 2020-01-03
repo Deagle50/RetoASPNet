@@ -10,50 +10,54 @@
     <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
 
     <%-- CSS propio --%>
-        <link href="style/style.css" rel="stylesheet" type="text/css"/>
+        <link href="~/Style/style.css" rel="stylesheet" type="text/css"/>   
 
-
-    <%-- Script material design 2.0 --%>
+    <%-- OpenLayerMaps Script and CSS--%>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css" type="text/css">
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/build/ol.js"></script>    
     
-        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <%-- JavaScript Scripts.js --%>
+        <script src="Scripts/Scripts.js"></script>    
 
     <%-- Material design 2 MUI --%>
         <link href="//cdn.muicss.com/mui-0.9.43/css/mui.min.css" rel="stylesheet" type="text/css" />
         <script src="//cdn.muicss.com/mui-0.9.43/js/mui.min.js"></script>
 
-
-    <!--Bootstrap-->
-
-        <%--<link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.css" media="screen">
-        <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">--%>
-
 </head>
 <body id="cuerpo" class="darkbody">
     <form runat="server">
 
-
+        <%-- Navbar --%>
         <div class="topnav darktopnav" id="topnavid">
             <div class="topnav2">
-            <a href="Source.aspx" class="active">Página principal</a>
+            <a id="sbsource" runat="server" href="Source.aspx">Página principal</a>
             <div class="darkdd dd" id="ddid">
                 <button  class="darkdropbtn dropbtn" id="dropbtnid">Información</button>
                     <i class="fa fa-caret-down"></i>
                 
                 <div class="darkdd-content dd-content" id="dd-contentid">
-                    <a href="Mobs.aspx">Mobs</a>
+                    <a id="sbMobs" runat="server"  href="Mobs.aspx">Mobs</a>
                     <a href="Biomes.aspx">Biomas</a>
                     <a href="Structures.aspx">Estructuras</a>
                     <a href="Tools.aspx">Herramientas</a>
                     <a href="Easter_eggs.aspx">Easter Eggs</a>
                 </div>
             </div>
-            <a href="About.aspx">Sobre nosotros</a>
-            <a href="Contact.aspx">Contacto</a>
+            <a id="sbabout" runat="server" href="About.aspx">Sobre nosotros</a>
+            <a id="sbcontact" runat="server" href="Contact.aspx">Contacto</a>           
             
             
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+            
+                
+            <a ID="lblUser" runat="server" Text="" style="background-color:#333333; border-radius:0px; float:left;"></a>
+            <div class="login" style="background-color:#333333;">
+                
+                <%--<a id="iduser" runat="server"></a>--%>
+                <%--<a href="#"  runat="server"  önclick="<% getPKWhales();%>" style="height:7px;width:40px;border:outset">PK</a>--%>
+                <a id="idlogin" href="#" onserverclick="login_Click" style="background-color:#4CAF50;border-radius:7px 0px 0px 7px;" runat="server">Iniciar sesión</a>
+                
+                <a id="idregister" href="Register.aspx" style="background-color:#4CAF50;border-radius:0px 7px 7px 0px;">Registrarse</a>
             </div>
         </div>
 
@@ -68,7 +72,7 @@
                          &nbsp;- &nbsp;Minecraft &nbsp;
                         <a runat="server" href="~/About">Sobre nosotros</a> 
                         <a runat="server" href="~/Contact">Contacto</a> 
-                        <a href="javascript:void(0);" onclick="cambiarTema()">Tema</a>
+                        <a href="#" onclick="cambiarTema()">Tema</a>
                         <a runat="server" href="#">Idioma</a>
                 </footer>
                     </div>
@@ -77,6 +81,22 @@
 
     </form>
 
-    <script src="Scripts/Scripts.js"></script>
+    <script type="text/javascript">
+        var map = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([-1.97598, 43.32163]),
+                zoom: 18
+            })
+        });
+
+        
+    </script>
+        
 </body>
 </html>

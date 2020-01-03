@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\RetoASPNet"
+    "\\RetoASPNet",
+    "\\RetoASPNet\\images"
   ],
-  "SelectedNode": "\\RetoASPNet.sln",
+  "SelectedNode": "\\RetoASPNet\\images",
   "PreviewInSolutionExplorer": false
 }
